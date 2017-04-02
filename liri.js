@@ -81,18 +81,17 @@ function omdbAPI() {
 
             if (!error && response.statusCode === 200) {
 
-                // Parse the body of the site and recover just the imdbRating
-                // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
-                console.log(JSON.parse(body))
-                console.log("The movie's rating is: " + JSON.parse(body).imdbRating);
-                console.log(JSON.parse(body).Title,
-                    JSON.parse(body).Year,
-                    JSON.parse(body).Country,
-                    JSON.parse(body).Language,
-                    JSON.parse(body).Plot,
-                    JSON.parse(body).Actors,
-                    JSON.parse(body).Ratings[1]
-                )
+                var omdbData= JSON.parse(body)
+
+                console.log("imdbRating: " + omdbData.imdbRating)
+                console.log("Title: " + omdbData.Title)
+                console.log("Year: " + omdbData.Year)
+                console.log("Country: " + omdbData.Country)
+                console.log("Language: " + omdbData.Language)
+                console.log("Plot: " + omdbData.Plot)
+                console.log("Actors: " + omdbData.Actors)
+                console.log("Rotten tomato rating: " + omdbData.Ratings[1])
+
             }
         })
     }
@@ -101,18 +100,16 @@ function omdbAPI() {
 
             if (!error && response.statusCode === 200) {
 
-                // Parse the body of the site and recover just the imdbRating
-                // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
-                console.log(JSON.parse(body))
-                console.log("The movie's rating is: " + JSON.parse(body).imdbRating);
-                console.log(JSON.parse(body).Title,
-                    JSON.parse(body).Year,
-                    JSON.parse(body).Country,
-                    JSON.parse(body).Language,
-                    JSON.parse(body).Plot,
-                    JSON.parse(body).Actors,
-                    JSON.parse(body).Ratings[1]
-                )
+                var omdbData= JSON.parse(body)
+                console.log("imdbRating: " + omdbData.imdbRating);
+                console.log("Title: " + omdbData.Title)
+                console.log("Year: " + omdbData.Year)
+                console.log("Country: " + omdbData.Country)
+                console.log("Language: " + omdbData.Language)
+                console.log("Plot: " + omdbData.Plot)
+                console.log("Actors: " + omdbData.Actors)
+                console.log("Rotten tomato rating: " + omdbData.Ratings[1])
+
             }
         })
     }
